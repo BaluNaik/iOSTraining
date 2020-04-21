@@ -46,7 +46,7 @@ class BTLabel: UILabel {
     
     func makeBorder() {
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = UIColor.systemPink.cgColor
+        self.layer.borderColor = UIColor.red.cgColor
         self.makeRoundedEdges()
     }
     

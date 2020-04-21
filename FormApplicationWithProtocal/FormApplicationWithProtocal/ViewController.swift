@@ -16,6 +16,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         button.showEnabled()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let receiverVC = segue.destination as? EmpFormViewController {
+            receiverVC.delegate = self  // thats means call back is implemented in this class
+        }
+    }
 
+
+}
+
+// MARK: - FormViewControllerDelegate
+
+extension ViewController: FormViewControllerDelegate {
+    
+    func submitDate(data: Emp) {
+        // Now data will get in data parameter
+        
+    }
+    
 }
 
