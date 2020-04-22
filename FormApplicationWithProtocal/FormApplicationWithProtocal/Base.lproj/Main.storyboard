@@ -15,6 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Skp-Ot-gLb">
+                                <rect key="frame" x="20" y="87" width="365" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hw-oO-qeJ" customClass="BTLabel" customModule="FormApplicationWithProtocal" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="8" width="336" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwZ-ji-f4x" customClass="BTLabel" customModule="FormApplicationWithProtocal" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="60" width="336" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmY-Aa-dul" customClass="BTLabel" customModule="FormApplicationWithProtocal" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="105" width="336" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wB-HO-clR" customClass="BTLabel" customModule="FormApplicationWithProtocal" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="157" width="336" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEf-Og-s8b" customClass="BTButton" customModule="FormApplicationWithProtocal" customModuleProvider="target">
                                 <rect key="frame" x="103" y="433" width="237" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,11 +72,16 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="mEf-Og-s8b" id="3ev-xb-eXk"/>
+                        <outlet property="dobLabel" destination="8wB-HO-clR" id="XTs-Kr-ACW"/>
+                        <outlet property="emailLabel" destination="nwZ-ji-f4x" id="jg2-R9-skj"/>
+                        <outlet property="fullNameLabel" destination="4Hw-oO-qeJ" id="8at-i4-ORI"/>
+                        <outlet property="genderLabel" destination="bmY-Aa-dul" id="AEn-xn-Zfl"/>
+                        <outlet property="infoView" destination="Skp-Ot-gLb" id="0TN-ZH-wr2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-200" y="138"/>
+            <point key="canvasLocation" x="-200.00000000000003" y="137.94642857142856"/>
         </scene>
         <!--Emp Form View Controller-->
         <scene sceneID="9Z5-lM-imz">
