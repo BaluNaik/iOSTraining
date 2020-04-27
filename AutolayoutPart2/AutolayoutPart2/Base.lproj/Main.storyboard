@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutolayoutPart2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7o-hr-Wkj">
+                                <rect key="frame" x="167" y="433" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.34901960780000002" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1TE-CJ-Bwq"/>
+                                    <constraint firstAttribute="width" constant="80" id="kXg-OJ-iY2"/>
+                                </constraints>
+                                <state key="normal" title="Click Me!!!"/>
+                                <connections>
+                                    <action selector="changeLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLm-P2-RiM"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp.png" translatesAutoresizingMaskIntoConstraints="NO" id="nzA-18-Wtl">
+                                <rect key="frame" x="147" y="84" width="120" height="120"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="SVX-Qj-SaT"/>
+                                    <constraint firstAttribute="width" constant="120" id="ecn-SH-39Y"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvI-4B-xmr">
+                                <rect key="frame" x="33" y="234" width="331" height="169"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-KJ-YUA">
+                                <rect key="frame" x="20" y="508" width="150" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="boJ-wE-s4O">
+                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="50"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="vkg-0f-m2n">
+                                        <rect key="frame" x="53.5" y="0.0" width="43" height="50"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="dml-mp-uyT">
+                                        <rect key="frame" x="106.5" y="0.0" width="43.5" height="50"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="n1q-8Y-cBE"/>
+                                    <constraint firstAttribute="width" constant="150" id="pz5-ZM-xK4"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-R2-pOq">
+                                <rect key="frame" x="294" y="513" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.34901960780000002" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ZDr-Ld-H3I"/>
+                                    <constraint firstAttribute="height" constant="40" id="isd-53-DjR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="lYu-LJ-YeV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="sM9-Us-YFZ"/>
+                                </constraints>
+                                <state key="normal" title="FBAction">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dropFacbookIcon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5qA-07-SjV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j7o-hr-Wkj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3GX-3D-7po"/>
+                            <constraint firstItem="xvI-4B-xmr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="5zc-2b-48J"/>
+                            <constraint firstItem="wZ3-KJ-YUA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="B2V-0W-Xph"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2zd-R2-pOq" secondAttribute="trailing" constant="40" id="Due-in-9az"/>
+                            <constraint firstItem="2zd-R2-pOq" firstAttribute="centerY" secondItem="wZ3-KJ-YUA" secondAttribute="centerY" id="Odf-ks-Rvs"/>
+                            <constraint firstItem="nzA-18-Wtl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Uv6-Lw-JZc"/>
+                            <constraint firstItem="j7o-hr-Wkj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WlX-RF-g3r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xvI-4B-xmr" secondAttribute="trailing" constant="50" id="cTC-wq-bZF"/>
+                            <constraint firstItem="nzA-18-Wtl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dDt-Rq-g0R"/>
+                            <constraint firstItem="xvI-4B-xmr" firstAttribute="top" secondItem="nzA-18-Wtl" secondAttribute="bottom" constant="30" id="nN4-Dt-PH6"/>
+                            <constraint firstItem="j7o-hr-Wkj" firstAttribute="top" secondItem="xvI-4B-xmr" secondAttribute="bottom" constant="30" id="qTB-gF-oPc"/>
+                            <constraint firstItem="wZ3-KJ-YUA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="80" id="zHj-J8-IC7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fbIcon" destination="boJ-wE-s4O" id="g3X-XS-wZr"/>
+                        <outlet property="imageViewWConstraint" destination="ecn-SH-39Y" id="KGw-K9-hPU"/>
+                        <outlet property="stackView" destination="wZ3-KJ-YUA" id="Lr4-F4-MCD"/>
+                        <outlet property="twiIcon" destination="vkg-0f-m2n" id="fUQ-Qm-xEs"/>
+                        <outlet property="viewTopConstraint" destination="nN4-Dt-PH6" id="C9x-8S-FCi"/>
+                        <outlet property="whatsappIcon" destination="dml-mp-uyT" id="HUT-6V-no7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook" width="32" height="32"/>
+        <image name="twitter" width="32" height="32"/>
+        <image name="whatsapp.png" width="32" height="32"/>
+        <image name="whatsapp_icon" width="32" height="32"/>
+    </resources>
+</document>
