@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FzS-VC-ddc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="jbf-BM-2qe">
+            <objects>
+                <tableViewController id="g3T-S7-dYU" customClass="ProfileViewController" customModule="ProfileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0fs-IV-La0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="120" id="sn3-te-kgx" customClass="ProfileTableViewCell" customModule="ProfileApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sn3-te-kgx" id="cNi-rn-y76">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barack Obama" translatesAutoresizingMaskIntoConstraints="NO" id="1TG-zN-zvf">
+                                            <rect key="frame" x="15" y="15" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="Al4-Hy-7xV"/>
+                                                <constraint firstAttribute="width" constant="90" id="VkH-Su-JoL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EI-nU-FsZ">
+                                            <rect key="frame" x="110" y="15" width="294" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="sNO-5b-BeK"/>
+                                            </constraints>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Barack Obama">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="Courier-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="59 Years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFk-Qg-1xM">
+                                            <rect key="frame" x="110" y="45" width="90" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="OaI-x2-rUZ"/>
+                                                <constraint firstAttribute="width" constant="90" id="ZfV-J8-RZL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USA" translatesAutoresizingMaskIntoConstraints="NO" id="nTd-Gq-Md6">
+                                            <rect key="frame" x="374" y="45" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="C9h-lI-6WT"/>
+                                                <constraint firstAttribute="height" constant="30" id="J5L-zs-WWj"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U.S. President" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBS-OH-jBc">
+                                            <rect key="frame" x="110" y="70" width="289" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="KpU-ys-F4h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4EI-nU-FsZ" firstAttribute="top" secondItem="cNi-rn-y76" secondAttribute="top" constant="15" id="6Kr-MP-MG8"/>
+                                        <constraint firstAttribute="trailing" secondItem="nTd-Gq-Md6" secondAttribute="trailing" constant="10" id="Ijq-Sz-d6J"/>
+                                        <constraint firstAttribute="trailing" secondItem="4EI-nU-FsZ" secondAttribute="trailing" constant="10" id="WKS-Mr-OVs"/>
+                                        <constraint firstItem="nTd-Gq-Md6" firstAttribute="centerY" secondItem="cNi-rn-y76" secondAttribute="centerY" id="Yb8-h7-hob"/>
+                                        <constraint firstItem="SFk-Qg-1xM" firstAttribute="leading" secondItem="4EI-nU-FsZ" secondAttribute="leading" id="ZsX-Zk-K6g"/>
+                                        <constraint firstItem="1TG-zN-zvf" firstAttribute="centerY" secondItem="cNi-rn-y76" secondAttribute="centerY" id="axh-wa-DsI"/>
+                                        <constraint firstItem="4EI-nU-FsZ" firstAttribute="leading" secondItem="1TG-zN-zvf" secondAttribute="trailing" constant="5" id="gcO-7U-WEO"/>
+                                        <constraint firstItem="1TG-zN-zvf" firstAttribute="leading" secondItem="cNi-rn-y76" secondAttribute="leading" constant="15" id="nga-m2-WuP"/>
+                                        <constraint firstAttribute="trailing" secondItem="gBS-OH-jBc" secondAttribute="trailing" constant="15" id="oW6-15-Q8G"/>
+                                        <constraint firstItem="SFk-Qg-1xM" firstAttribute="top" secondItem="4EI-nU-FsZ" secondAttribute="bottom" id="qE9-qT-ssE"/>
+                                        <constraint firstItem="gBS-OH-jBc" firstAttribute="top" secondItem="SFk-Qg-1xM" secondAttribute="bottom" id="r5h-lr-yOk"/>
+                                        <constraint firstItem="gBS-OH-jBc" firstAttribute="leading" secondItem="SFk-Qg-1xM" secondAttribute="leading" id="umk-Mg-MEb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileAgeLabel" destination="SFk-Qg-1xM" id="xM7-Hy-dRM"/>
+                                    <outlet property="profileCountryImageView" destination="nTd-Gq-Md6" id="IqP-XC-ich"/>
+                                    <outlet property="profileImageView" destination="1TG-zN-zvf" id="AfX-jW-oGA"/>
+                                    <outlet property="profileJobLabel" destination="gBS-OH-jBc" id="Odm-yN-bf0"/>
+                                    <outlet property="profileNameLabel" destination="4EI-nU-FsZ" id="Hjk-03-ljQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g3T-S7-dYU" id="fbT-bz-Doc"/>
+                            <outlet property="delegate" destination="g3T-S7-dYU" id="lbM-Kt-VfZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="01Q-h4-KAl"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTt-u8-sNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.28985507246387" y="-147.32142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lRh-5f-X69">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FzS-VC-ddc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HCV-Oi-ePG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g3T-S7-dYU" kind="relationship" relationship="rootViewController" id="cdv-TH-COc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdE-9z-YA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10.144927536231885" y="-147.32142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Barack Obama" width="39.666667938232422" height="53.333332061767578"/>
+        <image name="USA" width="53.333332061767578" height="53.333332061767578"/>
+    </resources>
+</document>

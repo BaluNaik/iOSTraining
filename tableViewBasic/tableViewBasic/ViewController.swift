@@ -52,7 +52,35 @@ class ViewController: UIViewController {
         self.tableView.estimatedRowHeight = 80.0
         self.tableView.rowHeight = UITableView.automaticDimension
     }
-
+    
+    private func getTitleInSection(section: Int) -> String {
+        switch section {
+        case 0:
+            
+            return "Animals"
+        case 1:
+            
+            return "Flowers"
+        default:
+            
+            return "Fruits"
+        }
+    }
+    
+    private func geItemInSection(section: Int, row: Int) -> String {
+          switch section {
+          case 0:
+              
+            return self.animalsList[row]
+          case 1:
+              
+              return self.flowersList[row]
+          default:
+              
+              return self.fruitsList[row]
+          }
+      }
+      
 
 }
 
@@ -170,6 +198,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.section) \(indexPath.row)")
+        if let vc = self.storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController {
+            vc.setData(title: self.getTitleInSection(section: indexPath.section), imageName: self.geItemInSection(section: indexPath.section, row: indexPath.row))
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }
     }
     
 }

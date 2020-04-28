@@ -77,5 +77,36 @@
             </objects>
             <point key="canvasLocation" x="-613" y="-121"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="MoX-jA-q1C">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="oHg-0I-Ffl" customClass="DetailsViewController" customModule="tableViewBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4DB-xg-ukk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EqH-Lf-Z46">
+                                <rect key="frame" x="107" y="353" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Foe-3t-asJ"/>
+                                    <constraint firstAttribute="height" constant="200" id="Oij-sP-pT2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EqH-Lf-Z46" firstAttribute="centerX" secondItem="YjZ-6N-n9H" secondAttribute="centerX" id="8AN-e8-t5v"/>
+                            <constraint firstItem="EqH-Lf-Z46" firstAttribute="centerY" secondItem="YjZ-6N-n9H" secondAttribute="centerY" id="gNP-bU-y3u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YjZ-6N-n9H"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="EqH-Lf-Z46" id="w8S-kS-1Up"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vpd-q1-MBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="-153"/>
+        </scene>
     </scenes>
 </document>
