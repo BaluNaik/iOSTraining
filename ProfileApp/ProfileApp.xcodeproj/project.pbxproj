@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A58CA86024592AB700CF7B26 /* AddProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CA85F24592AB700CF7B26 /* AddProfileViewController.swift */; };
+		A58CA86224592AD900CF7B26 /* ProfileShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CA86124592AD900CF7B26 /* ProfileShowViewController.swift */; };
+		A5A43D182459166400B3A2D5 /* ProfileDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A43D172459166400B3A2D5 /* ProfileDetailsScreen.swift */; };
 		A5AE7A302457CB8400C65B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AE7A2F2457CB8400C65B97 /* AppDelegate.swift */; };
 		A5AE7A322457CB8400C65B97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AE7A312457CB8400C65B97 /* SceneDelegate.swift */; };
 		A5AE7A342457CB8400C65B97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AE7A332457CB8400C65B97 /* ProfileViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A58CA85F24592AB700CF7B26 /* AddProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileViewController.swift; sourceTree = "<group>"; };
+		A58CA86124592AD900CF7B26 /* ProfileShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShowViewController.swift; sourceTree = "<group>"; };
+		A5A43D172459166400B3A2D5 /* ProfileDetailsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailsScreen.swift; sourceTree = "<group>"; };
 		A5AE7A2C2457CB8400C65B97 /* ProfileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AE7A2F2457CB8400C65B97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5AE7A312457CB8400C65B97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5A43D152459164500B3A2D5 /* ListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A5AE7A332457CB8400C65B97 /* ProfileViewController.swift */,
+			);
+			path = ListScreen;
+			sourceTree = "<group>";
+		};
+		A5A43D162459165300B3A2D5 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A5A43D172459166400B3A2D5 /* ProfileDetailsScreen.swift */,
+				A58CA85F24592AB700CF7B26 /* AddProfileViewController.swift */,
+				A58CA86124592AD900CF7B26 /* ProfileShowViewController.swift */,
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
 		A5AE7A232457CB8400C65B97 = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +86,13 @@
 		A5AE7A2E2457CB8400C65B97 /* ProfileApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5A43D162459165300B3A2D5 /* DetailsScreen */,
+				A5A43D152459164500B3A2D5 /* ListScreen */,
 				A5AE7A462457CE0B00C65B97 /* DataProvider */,
 				A5AE7A432457CD5D00C65B97 /* DataModel */,
 				A5AE7A492457D0EF00C65B97 /* UICell */,
 				A5AE7A2F2457CB8400C65B97 /* AppDelegate.swift */,
 				A5AE7A312457CB8400C65B97 /* SceneDelegate.swift */,
-				A5AE7A332457CB8400C65B97 /* ProfileViewController.swift */,
 				A5AE7A352457CB8400C65B97 /* Main.storyboard */,
 				A5AE7A382457CB8500C65B97 /* Assets.xcassets */,
 				A5AE7A3A2457CB8500C65B97 /* LaunchScreen.storyboard */,
@@ -172,10 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5AE7A482457CE3200C65B97 /* ProfileDataAPI.swift in Sources */,
+				A5A43D182459166400B3A2D5 /* ProfileDetailsScreen.swift in Sources */,
+				A58CA86024592AB700CF7B26 /* AddProfileViewController.swift in Sources */,
 				A5AE7A342457CB8400C65B97 /* ProfileViewController.swift in Sources */,
 				A5AE7A452457CD7A00C65B97 /* Profile.swift in Sources */,
 				A5AE7A4B2457D11D00C65B97 /* ProfileTableViewCell.swift in Sources */,
 				A5AE7A302457CB8400C65B97 /* AppDelegate.swift in Sources */,
+				A58CA86224592AD900CF7B26 /* ProfileShowViewController.swift in Sources */,
 				A5AE7A322457CB8400C65B97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

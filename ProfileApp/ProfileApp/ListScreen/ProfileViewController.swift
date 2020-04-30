@@ -17,6 +17,30 @@ class ProfileViewController: UITableViewController {
         self.title = "profile".uppercased()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.addBarButtons()
+    }
+    
+    private func addBarButtons() {
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = editButton
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewProfile))
+        self.navigationItem.rightBarButtonItem = addButton
+    }
+    
+    
+    // MARK: - Action
+    
+    @objc private func addNewProfile() {
+        if let vc = self.storyboard?.instantiateViewController(identifier: "ProfileDetailsScreen") as? ProfileDetailsScreen {
+            vc.pageType = .Add
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    
     
     // MARK: - UITableViewDataSource
     
@@ -49,7 +73,11 @@ class ProfileViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let vc = self.storyboard?.instantiateViewController(identifier: "ProfileDetailsScreen") as? ProfileDetailsScreen {
+            vc.profileData = self.profileList[indexPath.section]
+            vc.pageType = .Show
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
 }
