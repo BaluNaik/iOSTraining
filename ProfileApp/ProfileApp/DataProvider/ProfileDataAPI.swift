@@ -6,7 +6,7 @@
 //  Copyright © 2020 BaluTutorial. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ProfileDataAPI {
     
@@ -26,6 +26,30 @@ class ProfileDataAPI {
         ]
         
         return profileList
+    }
+    
+    static func saveImageInDocumentDir( image: UIImage, name: String) {
+        // File Manger object
+        let fileManger = FileManager.default
+        let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(name + ".png")
+        // it returns documentDirectory path and ammending new file to that path
+        print(path)
+        let imageData = image.jpegData(compressionQuality: 0.5)  // it converts image into data object(Data)
+        fileManger.createFile(atPath: path, contents: imageData, attributes: nil)  // it will write image into device
+    }
+    
+    static func getImage(name title: String) -> UIImage? {
+        // File Manger object
+        let fileManger = FileManager.default
+        let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(title + ".png")
+        print(path)
+        if fileManger.fileExists(atPath: path) {
+            
+            return UIImage(contentsOfFile: path)
+        } else {
+            
+            return nil
+        }
     }
     
 }

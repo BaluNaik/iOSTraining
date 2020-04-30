@@ -29,7 +29,11 @@ class ProfileTableViewCell: UITableViewCell {
                 profileJobLabel.text = job
             }
             if let profilePic = data.name {
-                profileImageView.image = UIImage(named: profilePic)
+                if let image = UIImage(named: profilePic) {
+                    profileImageView.image = image
+                } else if let image = ProfileDataAPI.getImage(name: profilePic.replacingOccurrences(of: " ", with: ""))  {
+                    profileImageView.image = image
+                }
             }
             if let flag = data.country {
                 profileCountryImageView.image = UIImage(named: flag)

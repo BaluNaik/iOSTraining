@@ -13,11 +13,18 @@ enum DetailsType {
     case Add
 }
 
+protocol ProfileDetailsScreenDelegate: class {
+    
+    func saveNewprofile(data: Profile)
+    
+}
+
 class ProfileDetailsScreen: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     var profileData: Profile?
     var pageType:DetailsType = .Add
+    weak var delegate: ProfileDetailsScreenDelegate?
    
  
     override func viewDidLoad() {
@@ -65,6 +72,7 @@ class ProfileDetailsScreen: UIViewController {
     
     private func addProfileDataScreen() {
         if let childVC = self.storyboard?.instantiateViewController(identifier: "AddProfileViewController") as? AddProfileViewController {
+            childVC.delegate = self
             self.addChild(childVC)
             childVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             childVC.view.frame = self.containerView.bounds // i.e. containerView autolayout sizes are applying to childview
@@ -74,3 +82,12 @@ class ProfileDetailsScreen: UIViewController {
     }
     
   }
+
+
+extension ProfileDetailsScreen: AddProfileViewControllerDelegate {
+    
+    func saveNewprofile(data: Profile) {
+        self.delegate?.saveNewprofile(data: data)
+        self.navigationController?.popViewController(animated: true)
+    }
+}

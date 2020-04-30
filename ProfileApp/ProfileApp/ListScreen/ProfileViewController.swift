@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UITableViewController {
     
-    let profileList = ProfileDataAPI.getProfile() // Returns list of profile
+    var profileList = ProfileDataAPI.getProfile() // Returns list of profile
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,7 @@ class ProfileViewController: UITableViewController {
     @objc private func addNewProfile() {
         if let vc = self.storyboard?.instantiateViewController(identifier: "ProfileDetailsScreen") as? ProfileDetailsScreen {
             vc.pageType = .Add
+            vc.delegate = self
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -76,9 +77,18 @@ class ProfileViewController: UITableViewController {
         if let vc = self.storyboard?.instantiateViewController(identifier: "ProfileDetailsScreen") as? ProfileDetailsScreen {
             vc.profileData = self.profileList[indexPath.section]
             vc.pageType = .Show
+            vc.delegate = self
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
 }
 
+
+extension ProfileViewController: ProfileDetailsScreenDelegate {
+    
+    func saveNewprofile(data: Profile) {
+        self.profileList.append(data)
+        self.tableView.reloadData()
+    }
+}
