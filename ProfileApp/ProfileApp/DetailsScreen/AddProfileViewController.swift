@@ -21,11 +21,11 @@ class AddProfileViewController: UIViewController {
     @IBOutlet weak var jobTextFiled: UITextField!
     @IBOutlet weak var dobTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
-    @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var submitButton: UIButton!
     private var datePicker: UIDatePicker?
     private var selectedField: UITextField?
     weak var delegate: AddProfileViewControllerDelegate?
+    private var pickerView: UIPickerView?
     
     let jobsList: [String] = ["Cricket Player", "Tennis player","Footballer player", "Basketball player", "Others"]
     let countryList = ["india", "Switzerland", "USA","Brazil","Germany", "Other"]
@@ -37,15 +37,12 @@ class AddProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.pickerView.isHidden = true
-        self.pickerView.dataSource = self
-        self.pickerView.delegate = self
-        
         self.profileImageView.backgroundColor = UIColor.lightGray
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.height / 2
         submitButton.layer.cornerRadius = 4
         submitButton.setTitleColor(UIColor.white, for: .normal)
         self.setUpActionOnImageView()
+        self.setUpPickerView()
     }
     
     func setUpActionOnImageView() {
@@ -53,6 +50,31 @@ class AddProfileViewController: UIViewController {
         gestureAction.numberOfTapsRequired = 2
         self.profileImageView.isUserInteractionEnabled = true
         self.profileImageView.addGestureRecognizer(gestureAction)
+    }
+    
+    func setUpPickerView() {
+        self.pickerView = UIPickerView(frame: CGRect(x: 0, y: self.view.frame.height - 180, width: view.frame.width, height: 180))
+        self.pickerView?.backgroundColor = .white
+        self.pickerView?.delegate = self
+        self.pickerView?.dataSource = self
+
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(pickerDoneClicked))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(pickerCloseClicked))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+
+        jobTextFiled.inputView = self.pickerView
+        jobTextFiled.inputAccessoryView = toolBar
+        countryTextField.inputView = self.pickerView
+        countryTextField.inputAccessoryView = toolBar
+        
     }
     
     
@@ -138,6 +160,20 @@ class AddProfileViewController: UIViewController {
         self.dobTextField.endEditing(true)
     }
     
+    @objc func pickerDoneClicked() {
+        let selectedRow = self.pickerView?.selectedRow(inComponent: 0) ?? 0
+        if self.selectedField == jobTextFiled {
+            self.jobTextFiled.text = self.jobsList[selectedRow]
+        } else {
+            self.countryTextField.text = self.countryList[selectedRow]
+        }
+        self.selectedField?.resignFirstResponder()
+    }
+    
+    @objc func pickerCloseClicked() {
+        self.selectedField?.resignFirstResponder()
+    }
+    
     @IBAction func submitClick(_ sender: Any) {
         if let name = self.fullNameTextField.text,
             let job = self.jobTextFiled.text,
@@ -161,12 +197,9 @@ extension AddProfileViewController: UITextFieldDelegate {
         self.selectedField = textField
         if textField == jobTextFiled || textField == countryTextField {
             //show picker for this fields
-            textField.resignFirstResponder()
-            textField.inputView = self.pickerView
-           self.pickerView.reloadAllComponents()
-           self.pickerView.isHidden = false
+            self.pickerView?.reloadAllComponents()
             
-             return true
+            return true
         }
         else if textField == dobTextField {
             textField.resignFirstResponder()
@@ -193,6 +226,15 @@ extension AddProfileViewController: UITextFieldDelegate {
             countryTextField.becomeFirstResponder()
         } else if textField == countryTextField {
             countryTextField.resignFirstResponder()
+        }
+        
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == jobTextFiled || textField == countryTextField {
+            
+            return false
         }
         
         return true

@@ -321,22 +321,12 @@
                                     <action selector="submitClick:" destination="lMm-QI-WLg" eventType="touchUpInside" id="47Z-YY-haO"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-sp-cvp">
-                                <rect key="frame" x="0.0" y="732" width="414" height="150"/>
-                                <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="263-Pp-pcO"/>
-                                </constraints>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EZn-ze-eWz" firstAttribute="top" secondItem="nNF-Aa-SSU" secondAttribute="bottom" constant="20" id="2VU-sR-EWi"/>
                             <constraint firstItem="ih8-pZ-JFC" firstAttribute="leading" secondItem="dSj-Le-HJi" secondAttribute="leading" id="51O-6r-Jyx"/>
-                            <constraint firstItem="fbI-sp-cvp" firstAttribute="leading" secondItem="afo-vT-3Te" secondAttribute="leading" id="5I9-2d-3lO"/>
                             <constraint firstItem="dSj-Le-HJi" firstAttribute="trailing" secondItem="EZn-ze-eWz" secondAttribute="trailing" id="6Pu-a6-8yI"/>
-                            <constraint firstItem="afo-vT-3Te" firstAttribute="bottom" secondItem="fbI-sp-cvp" secondAttribute="bottom" constant="-20" id="8XD-bE-zdn"/>
-                            <constraint firstItem="fbI-sp-cvp" firstAttribute="trailing" secondItem="afo-vT-3Te" secondAttribute="trailing" id="8sw-w6-cyB"/>
                             <constraint firstItem="9zA-I6-30O" firstAttribute="leading" secondItem="afo-vT-3Te" secondAttribute="leading" constant="20" id="AKq-8C-1OX"/>
                             <constraint firstItem="EZn-ze-eWz" firstAttribute="trailing" secondItem="nNF-Aa-SSU" secondAttribute="trailing" id="Cc9-vg-xgZ"/>
                             <constraint firstItem="nNF-Aa-SSU" firstAttribute="leading" secondItem="afo-vT-3Te" secondAttribute="leading" constant="20" id="GPi-go-lOd"/>
@@ -359,7 +349,6 @@
                         <outlet property="dobTextField" destination="dSj-Le-HJi" id="rGk-Ab-mmB"/>
                         <outlet property="fullNameTextField" destination="nNF-Aa-SSU" id="bv0-GZ-8jT"/>
                         <outlet property="jobTextFiled" destination="EZn-ze-eWz" id="j6W-NY-SDS"/>
-                        <outlet property="pickerView" destination="fbI-sp-cvp" id="jrC-C7-PsP"/>
                         <outlet property="profileImageView" destination="JWa-h8-R0N" id="6bH-lM-qaN"/>
                         <outlet property="submitButton" destination="9zA-I6-30O" id="s3x-hy-1Qx"/>
                     </connections>
