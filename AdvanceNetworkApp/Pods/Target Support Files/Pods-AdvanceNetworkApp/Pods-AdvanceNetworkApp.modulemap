@@ -1,0 +1,6 @@
+framework module Pods_AdvanceNetworkApp {
+  umbrella header "Pods-AdvanceNetworkApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
