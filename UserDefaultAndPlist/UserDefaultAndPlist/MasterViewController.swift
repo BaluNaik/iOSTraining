@@ -114,19 +114,43 @@ class MasterViewController: UITableViewController {
 
 extension MasterViewController {
     
-    func getDataFromPlist() {
-        // Fist check this file in docuemnt dir
-        
-        if let fileUrl = Bundle.main.path(forResource: "User", ofType: "plist") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: fileUrl))
-                if let dic = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format:.none) as? [String: Any] {
-                    self.object = dic
+    func getFileURL() -> URL? {
+        /*
+          * First check User.plist is in doc dir
+          * if it's in doc dir than return doc dir path
+          * Else copy User.plist from bundle.main to documetn dir
+          * Return file URL from this method
+         */
+        let rootPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, .userDomainMask, true)[0]
+        let filePath = rootPath.appending("/User.plist")
+        if !FileManager.default.fileExists(atPath: filePath) {
+            if let fileBundlePath = Bundle.main.path(forResource: "User", ofType: "plist") {
+                let fileBundleURl = URL(fileURLWithPath: fileBundlePath)
+                let filePathUrl = URL(fileURLWithPath: filePath)
+                do {
+                    try FileManager.default.copyItem(at: fileBundleURl, to: filePathUrl)
+                } catch {
+                    
+                    return nil
                 }
             }
-            catch {
+        }
+        
+        return URL(fileURLWithPath: filePath)
+    }
+    
+    func getDataFromPlist() {
+        if let fileUrl = getFileURL() {
+            do {
+                let data = try Data(contentsOf: fileUrl)
+                if let dic = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format:.none) as? [String: Any] {
+                    self.object = dic
+                    self.tableView.reloadData()
+                }
+            } catch {
                 print("Error in reading")
             }
+ 
         }
     }
     
@@ -136,24 +160,24 @@ extension MasterViewController {
                 users.append(newUser)
                 self.object["User"] = users
                 self.object["LastUpdateDate"] = Date()
-                if let fileUrl = Bundle.main.path(forResource: "User", ofType: "plist") {
-                    if !writePlistFile(withData: self.object as NSDictionary, atPath: fileUrl) {
-                        print("Error writing list \(fileUrl)")
-                    }
+                if !writePlistFile(withData: self.object as NSDictionary) {
+                    print("Error writing list")
                 }
-                self.tableView.reloadData()
+                self.getDataFromPlist()
             }
         }
         
     }
     
-    func writePlistFile(withData data: NSDictionary, atPath path: String) -> Bool {
-        guard FileManager.default.fileExists(atPath: path) else {
+    func writePlistFile(withData data: NSDictionary) -> Bool {
+        let rootPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, .userDomainMask, true)[0]
+        let filePath = rootPath.appending("/User.plist")
+        guard FileManager.default.fileExists(atPath: filePath) else {
             
             return false
         }
 
-        return data.write(toFile: path, atomically: false)
+        return data.write(toFile: filePath, atomically: false)
     }
 }
 
