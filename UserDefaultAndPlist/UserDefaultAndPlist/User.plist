@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ReadOnly</key>
+	<false/>
+	<key>LastUpdateDate</key>
+	<date>2020-05-26T02:19:51Z</date>
+	<key>User</key>
+	<array>
+		<string>Test User1</string>
+		<string>Rajesh Kumar</string>
+		<string>Kishore krishana</string>
+	</array>
+</dict>
+</plist>

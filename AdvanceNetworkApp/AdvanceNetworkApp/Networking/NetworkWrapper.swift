@@ -247,4 +247,24 @@ class NetworkWrapper: NSObject {
         task?.resume()
     }
     
+    func uploadTask() {
+        var request = URLRequest(url: URL(string:"someUrl")!)
+        request.httpMethod = "POST"
+        let task = session?.uploadTask(with: request, from: Data(), completionHandler: { (data, response, error) in
+            
+        })
+       task?.resume()
+        
+    }
+    
+    
+    func downlaodTask() {
+        var request = URLRequest(url: URL(string:"someUrl")!)
+        request.httpMethod = "GET"
+        let task = session?.downloadTask(with: request, completionHandler: { (url, response, error) in
+            
+        })
+        task?.resume()
+    }
+    
 }
