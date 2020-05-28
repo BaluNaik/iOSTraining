@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88CD7820ABA07D015879B3D7 /* Pods_UserDefaultAndPlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299BAA82DF20789A882E8730 /* Pods_UserDefaultAndPlist.framework */; };
 		A5170E2F247CB2F0002670EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5170E2E247CB2F0002670EE /* AppDelegate.swift */; };
 		A5170E31247CB2F0002670EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5170E30247CB2F0002670EE /* SceneDelegate.swift */; };
 		A5170E33247CB2F0002670EE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5170E32247CB2F0002670EE /* MasterViewController.swift */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		299BAA82DF20789A882E8730 /* Pods_UserDefaultAndPlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserDefaultAndPlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0AB5BF5F069A0999580A0F /* Pods-UserDefaultAndPlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserDefaultAndPlist.debug.xcconfig"; path = "Target Support Files/Pods-UserDefaultAndPlist/Pods-UserDefaultAndPlist.debug.xcconfig"; sourceTree = "<group>"; };
 		A5170E2B247CB2F0002670EE /* UserDefaultAndPlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDefaultAndPlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5170E2E247CB2F0002670EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5170E30247CB2F0002670EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,8 @@
 		A5170E3E247CB2F1002670EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5170E44247CB38F002670EE /* User.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = User.plist; sourceTree = "<group>"; };
 		A5170E46247CC939002670EE /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		A5CC27CE247E0AA600C0FFE4 /* UserDefaultAndPlist.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = UserDefaultAndPlist.entitlements; sourceTree = "<group>"; };
+		FED99283D1D45E719CB3CC29 /* Pods-UserDefaultAndPlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserDefaultAndPlist.release.xcconfig"; path = "Target Support Files/Pods-UserDefaultAndPlist/Pods-UserDefaultAndPlist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +42,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CD7820ABA07D015879B3D7 /* Pods_UserDefaultAndPlist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F9B7E72D899C63DEABE926E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A0AB5BF5F069A0999580A0F /* Pods-UserDefaultAndPlist.debug.xcconfig */,
+				FED99283D1D45E719CB3CC29 /* Pods-UserDefaultAndPlist.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A5170E22247CB2F0002670EE = {
 			isa = PBXGroup;
 			children = (
 				A5170E2D247CB2F0002670EE /* UserDefaultAndPlist */,
 				A5170E2C247CB2F0002670EE /* Products */,
+				5F9B7E72D899C63DEABE926E /* Pods */,
+				AE1FA1ADE9A73AE341C8B80B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +79,7 @@
 		A5170E2D247CB2F0002670EE /* UserDefaultAndPlist */ = {
 			isa = PBXGroup;
 			children = (
+				A5CC27CE247E0AA600C0FFE4 /* UserDefaultAndPlist.entitlements */,
 				A5170E46247CC939002670EE /* UserDefaultManager.swift */,
 				A5170E2E247CB2F0002670EE /* AppDelegate.swift */,
 				A5170E30247CB2F0002670EE /* SceneDelegate.swift */,
@@ -76,6 +94,14 @@
 			path = UserDefaultAndPlist;
 			sourceTree = "<group>";
 		};
+		AE1FA1ADE9A73AE341C8B80B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				299BAA82DF20789A882E8730 /* Pods_UserDefaultAndPlist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5170E41247CB2F1002670EE /* Build configuration list for PBXNativeTarget "UserDefaultAndPlist" */;
 			buildPhases = (
+				1E019684236D2AA30ECC1AA4 /* [CP] Check Pods Manifest.lock */,
 				A5170E27247CB2F0002670EE /* Sources */,
 				A5170E28247CB2F0002670EE /* Frameworks */,
 				A5170E29247CB2F0002670EE /* Resources */,
+				5B8917EB685F0D52228E8677 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +170,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E019684236D2AA30ECC1AA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UserDefaultAndPlist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B8917EB685F0D52228E8677 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UserDefaultAndPlist/Pods-UserDefaultAndPlist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UserDefaultAndPlist/Pods-UserDefaultAndPlist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UserDefaultAndPlist/Pods-UserDefaultAndPlist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5170E27247CB2F0002670EE /* Sources */ = {
@@ -294,9 +364,11 @@
 		};
 		A5170E42247CB2F1002670EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0AB5BF5F069A0999580A0F /* Pods-UserDefaultAndPlist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/UserDefaultAndPlist/UserDefaultAndPlist.entitlements";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 456E6NNKP2;
 				INFOPLIST_FILE = UserDefaultAndPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,9 +384,11 @@
 		};
 		A5170E43247CB2F1002670EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED99283D1D45E719CB3CC29 /* Pods-UserDefaultAndPlist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/UserDefaultAndPlist/UserDefaultAndPlist.entitlements";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 456E6NNKP2;
 				INFOPLIST_FILE = UserDefaultAndPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

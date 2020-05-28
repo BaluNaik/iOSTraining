@@ -166,7 +166,6 @@ extension MasterViewController {
                 self.getDataFromPlist()
             }
         }
-        
     }
     
     func writePlistFile(withData data: NSDictionary) -> Bool {
@@ -179,5 +178,39 @@ extension MasterViewController {
 
         return data.write(toFile: filePath, atomically: false)
     }
+    
+    func saveCustObject() {
+        let user1 = User(userName: "Test1", password: "pass1")
+        let user2 = User(userName: "Test2", password: "pass2")
+        let user3 = User(userName: "Test3", password: "pass3");
+        
+        let array = [user1, user2, user3];
+        
+        let rootPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, .userDomainMask, true)[0]
+        let filePath = rootPath.appending("/User.plist")
+        guard FileManager.default.fileExists(atPath: filePath) else {
+            
+            return
+        }
+        //Saving
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: array, requiringSecureCoding: false)
+            try data.write(to: URL(fileURLWithPath:filePath))
+        } catch {
+            print("Couldn't write file")
+        }
+        
+        //reading
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
+            if let loadedUser = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [User] {
+                let result = loadedUser
+            }
+        } catch {
+            print("Couldn't read file.")
+        }
+    }
+    
+    
 }
 

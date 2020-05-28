@@ -1,0 +1,35 @@
+PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - SkyFloatingLabelTextField (3.8.0)
+  - SwiftValidator (4.0.0)
+
+DEPENDENCIES:
+  - FMDB
+  - SkyFloatingLabelTextField (~> 3.0)
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.2.0`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+    - SkyFloatingLabelTextField
+
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.2.0
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.2.0
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  SwiftValidator: 249b6b3ae3b294266c5b9de134d94f18f2d5aa47
+
+PODFILE CHECKSUM: 015f9ac8205c9245dbee4ca61880891e2519911a
+
+COCOAPODS: 1.8.4
