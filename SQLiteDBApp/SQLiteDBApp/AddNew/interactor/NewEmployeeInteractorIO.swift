@@ -8,12 +8,25 @@
 
 import Foundation
 
+enum QueryStatus {
+    case insertSucess
+    case insertFailure
+    case updateSucess
+    case updateFailure
+}
+
+
 protocol NewEmployeeInteractorInput: class {
+    
+    func submitNewRecord(data: EMP)
+    func submitUpdateRecord(data: EMP)
     
 }
 
 
 protocol NewEmployeeInteractorOutput: class {
+    
+    func updateQueryStatus(status: QueryStatus)
     
 }
 

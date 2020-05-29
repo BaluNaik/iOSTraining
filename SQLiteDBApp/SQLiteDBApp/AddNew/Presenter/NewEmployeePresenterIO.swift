@@ -11,9 +11,14 @@ import Foundation
 
 protocol NewEmployeePresenterInput: class {
     
+    func submitNewRecord(data: EMP)
+    func submitUpdateRecord(data: EMP)
+    
 }
 
 
 protocol NewEmployeePresenterOutput: class {
+    
+    func updateQueryStatus(status: QueryStatus)
     
 }

@@ -10,8 +10,9 @@ import UIKit
 
 class NewEmployeeAssembly {
     
-    func assemblyModule() -> NewEmployeeVC? {
+    func assemblyModule(for type: EmployeeFormType) -> NewEmployeeVC? {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewEmployeeVC") as? NewEmployeeVC
+        vc?.formType = type
         vc?.presenter = presenterModule(with: vc)
         
         return vc

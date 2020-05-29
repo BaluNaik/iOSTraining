@@ -14,5 +14,21 @@ class NewEmployeePresenter: NewEmployeePresenterInput, NewEmployeeInteractorOutp
     var interactor: NewEmployeeInteractorInput?
     var router: NewEmployeeRouterInput?
     
+    // MARK: - NewEmployeePresenterInput
+    
+    func submitUpdateRecord(data: EMP) {
+        self.interactor?.submitUpdateRecord(data: data)
+    }
+    
+    func submitNewRecord(data: EMP) {
+        self.interactor?.submitNewRecord(data: data)
+    }
+    
+    
+    // MARK: - NewEmployeeInteractorOutput
+    
+    func updateQueryStatus(status: QueryStatus) {
+        self.userinterface?.updateQueryStatus(status: status)
+    }
     
 }

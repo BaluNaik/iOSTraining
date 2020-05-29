@@ -12,4 +12,21 @@ class NewEmployeeInteractor: NewEmployeeInteractorInput {
     
     weak var presenter: NewEmployeeInteractorOutput?
     
+    
+    // MARK: - NewEmployeeInteractorInput
+    
+    func submitNewRecord(data: EMP) {
+        SQLiteManager.sharedInstance.insert(data: data) {[weak self] (status) in
+            let queryStatus = status ? QueryStatus.insertSucess : QueryStatus.insertFailure
+            self?.presenter?.updateQueryStatus(status: queryStatus)
+        }
+    }
+    
+    func submitUpdateRecord(data: EMP) {
+        SQLiteManager.sharedInstance.update(data: data) {[weak self] (status) in
+            let queryStatus = status ? QueryStatus.updateSucess : QueryStatus.updateFailure
+            self?.presenter?.updateQueryStatus(status: queryStatus)
+        }
+    }
+    
 }

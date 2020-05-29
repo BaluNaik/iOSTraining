@@ -53,7 +53,7 @@ class SQLiteManager {
     
     //MARK: - Public
     
-    func insert(data: EMP) {
+    func insert(data: EMP, handler: ((Bool)-> Void)) {
         let sqlStatement = String(format: "insert into EMP (FirstName, LastName,Email,Salary,Mobile,Jdate,About) values (\'%@\', \'%@\',\'%@\',%i,\'%@\',\'%@\',\'%@\')", data.fistName ?? "-",
                                   data.lastName ?? "-",
                                   data.email ?? "-",
@@ -63,6 +63,9 @@ class SQLiteManager {
                                   data.about ?? "-")
         if let status = self.database?.executeStatements(sqlStatement), status {
             print("New record is created")
+            handler(true)
+        } else {
+            handler(false)
         }
     }
     
@@ -86,7 +89,7 @@ class SQLiteManager {
         return list
     }
     
-    func update(data: EMP) {
+    func update(data: EMP, handler: ((Bool)-> Void)) {
         if let id = data.empID {
             let sqlStatement = String(format: "UPDATE EMP SET FirstName=\'%@\',LastName=\'%@\',Email=\'%@\',Salary=%i,Mobile=\'%@\',Jdate=\'%@\',About=\'%@\' WHERE ID=%i",
                                       data.fistName ?? "-",
@@ -99,15 +102,21 @@ class SQLiteManager {
                                       id)
             if let status = self.database?.executeStatements(sqlStatement), status {
                 print("Record is updated")
+                handler(true)
+            } else {
+                handler(false)
             }
         }
     }
     
-    func delete(id: Int) {
-            let sqlStatement = String(format: "DELETE FROM EMP WHERE ID = %u",id)
-            if let status = self.database?.executeStatements(sqlStatement), status {
-                print("Record is deleted")
-            }
+    func delete(id: Int, handler: ((Bool)-> Void)) {
+        let sqlStatement = String(format: "DELETE FROM EMP WHERE ID = %u",id)
+        if let status = self.database?.executeStatements(sqlStatement), status {
+            print("Record is deleted")
+            handler(true)
+        } else {
+            handler(false)
+        }
     }
     
 }
