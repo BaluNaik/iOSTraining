@@ -11,4 +11,6 @@ import Foundation
 
 protocol NewEmployeeRouterInput {
     
+    func moveToSomeScreen()
+    
 }

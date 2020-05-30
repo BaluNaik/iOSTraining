@@ -13,6 +13,7 @@ protocol NewEmployeePresenterInput: class {
     
     func submitNewRecord(data: EMP)
     func submitUpdateRecord(data: EMP)
+    func loadNextScreen()
     
 }
 

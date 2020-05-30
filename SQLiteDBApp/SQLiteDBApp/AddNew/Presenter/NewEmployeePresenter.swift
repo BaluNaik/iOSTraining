@@ -24,6 +24,10 @@ class NewEmployeePresenter: NewEmployeePresenterInput, NewEmployeeInteractorOutp
         self.interactor?.submitNewRecord(data: data)
     }
     
+    func loadNextScreen() {
+        self.router?.moveToSomeScreen()
+    }
+    
     
     // MARK: - NewEmployeeInteractorOutput
     

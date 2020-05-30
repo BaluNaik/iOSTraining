@@ -65,6 +65,7 @@ class NewEmployeeVC: UIViewController, ValidationDelegate, UITextFieldDelegate {
                 self.submitbutton.setTitle("Update", for: .normal)
             }
         }
+        self.presenter?.loadNextScreen()
     }
     
     @IBAction func submit() {

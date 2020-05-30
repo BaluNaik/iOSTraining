@@ -10,4 +10,8 @@ import Foundation
 
 class NewEmployeeRouter: NewEmployeeRouterInput {
     
+    func moveToSomeScreen() {
+        //Code for navigatining to next screen
+    }
+    
 }
