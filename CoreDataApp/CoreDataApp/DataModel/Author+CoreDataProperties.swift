@@ -19,6 +19,24 @@ extension Author {
 
     @NSManaged public var email: String?
     @NSManaged public var name: String?
-    @NSManaged public var commit: Commit?
+    @NSManaged public var commit: NSSet?
+
+}
+
+// MARK: Generated accessors for commits
+
+extension Author {
+
+    @objc(addCommitsObject:)
+    @NSManaged public func addToCommits(_ value: Commit)
+
+    @objc(removeCommitsObject:)
+    @NSManaged public func removeFromCommits(_ value: Commit)
+
+    @objc(addCommits:)
+    @NSManaged public func addToCommits(_ values: NSSet)
+
+    @objc(removeCommits:)
+    @NSManaged public func removeFromCommits(_ values: NSSet)
 
 }
