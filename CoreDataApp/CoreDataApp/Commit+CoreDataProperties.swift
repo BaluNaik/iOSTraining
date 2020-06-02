@@ -1,9 +1,8 @@
 //
 //  Commit+CoreDataProperties.swift
-//  CoreDataApp
+//  
 //
-//  Created by Balu Naik on 6/1/20.
-//  Copyright © 2020 BaluTutorial. All rights reserved.
+//  Created by Balu Naik on 6/2/20.
 //
 //
 
@@ -13,9 +12,7 @@ import CoreData
 
 extension Commit {
 
-    // Must required to change method name because we have featchRequest in Data Model class also.
     @nonobjc public class func createFetchRequest() -> NSFetchRequest<Commit> {
-        
         return NSFetchRequest<Commit>(entityName: "Commit")
     }
 

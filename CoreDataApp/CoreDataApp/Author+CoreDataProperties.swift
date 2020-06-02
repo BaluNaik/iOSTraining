@@ -1,9 +1,8 @@
 //
 //  Author+CoreDataProperties.swift
-//  CoreDataApp
+//  
 //
-//  Created by Balu Naik on 6/1/20.
-//  Copyright © 2020 BaluTutorial. All rights reserved.
+//  Created by Balu Naik on 6/2/20.
 //
 //
 
@@ -19,12 +18,11 @@ extension Author {
 
     @NSManaged public var email: String?
     @NSManaged public var name: String?
-    @NSManaged public var commit: NSSet?
+    @NSManaged public var commits: NSSet?
 
 }
 
 // MARK: Generated accessors for commits
-
 extension Author {
 
     @objc(addCommitsObject:)
