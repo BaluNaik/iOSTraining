@@ -265,5 +265,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return fetchedResultsController?.sections![section].name
+    }
 }
 
