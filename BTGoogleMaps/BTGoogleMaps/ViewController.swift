@@ -159,6 +159,23 @@ class ViewController: UIViewController {
         }
     }
     
+    private func featchPlaceGeoLocation(placeId: String) {
+        GMSPlacesClient.shared().lookUpPlaceID(placeId) {[weak self] (gmsPlace, error) in
+            if let _ = error {
+                
+                return
+            }
+            guard let placeInformation = gmsPlace else { return }
+            DispatchQueue.main.async {
+                self?.updateList(list: [])
+                self?.moveMarker(to: placeInformation.coordinate)
+                self?.updateMarketInfo(locality: placeInformation.name ?? "", subLocality: placeInformation.formattedAddress ?? "")
+                self?.googleMap.animate(toLocation: placeInformation.coordinate)
+            }
+        }
+    }
+    
+    
     private func updateList(list: [BTGooglePlace]) {
         if list.isEmpty {
             self.placesList = []
@@ -257,8 +274,7 @@ extension ViewController: UISearchBarDelegate, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let place = self.placesList[indexPath.row]
-        
-        //TODO:
+        self.featchPlaceGeoLocation(placeId: place.placeID)
     }
     
 }
