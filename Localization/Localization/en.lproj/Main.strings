@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "Q7X-uY-IrU"; */
+"Q7X-uY-IrU.text" = "Welcome";
+
+/* Class = "UIButton"; normalTitle = "Next Screen"; ObjectID = "WrL-xS-W5D"; */
+"WrL-xS-W5D.normalTitle" = "Next Screen";
+
+/* Class = "UIButton"; normalTitle = "Language"; ObjectID = "mvP-Oa-MFd"; */
+"mvP-Oa-MFd.normalTitle" = "Language";

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Localization
+
+  Created by Balu Naik on 6/10/20.
+  Copyright © 2020 BaluTutorial. All rights reserved.
+*/
+
+"home" = "Home";
+"details" = "Details";
+"hand_sign" = "Hand sign";

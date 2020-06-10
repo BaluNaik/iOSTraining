@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "Q7X-uY-IrU"; */
+"Q7X-uY-IrU.text" = "أهلا بك";
+
+/* Class = "UIButton"; normalTitle = "Next Screen"; ObjectID = "WrL-xS-W5D"; */
+"WrL-xS-W5D.normalTitle" = "الشاشة التالية";
+
+/* Class = "UIButton"; normalTitle = "Language"; ObjectID = "mvP-Oa-MFd"; */
+"mvP-Oa-MFd.normalTitle" = "لغة";
