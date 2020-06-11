@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var urlTextField: UITextField!
+    var url: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,16 @@ class ViewController: UIViewController {
            - NSAppTransportSecurity
            - NSAllowsArbitraryLoads --> YES   (for non https request)
          */
-        if let url = URL(string: "https://balututorial.com/") {
+        #if DEVELOPMENT
+        url = "https://www.google.com/"
+        #elseif STAGING
+        url = "https://www.apple.com"
+        #else
+        url = "https://www.balututorial.com/"
+        #endif
+        
+        if let urlString = self.url,
+            let url = URL(string: urlString) {
             webView.load(URLRequest(url: url))
         }
         webView.allowsBackForwardNavigationGestures = true
