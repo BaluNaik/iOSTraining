@@ -1,0 +1,236 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2020-06-12 04:06:42",
+    "containerVersion": {
+        "path": "accounts/6001382487/containers/31634909/versions/1",
+        "accountId": "6001382487",
+        "containerId": "31634909",
+        "containerVersionId": "1",
+        "name": "BasicSetup-v1",
+        "container": {
+            "path": "accounts/6001382487/containers/31634909",
+            "accountId": "6001382487",
+            "containerId": "31634909",
+            "name": "iOSGTMB1",
+            "publicId": "GTM-PRGJHXD",
+            "usageContext": [
+                "IOS_SDK_5"
+            ],
+            "fingerprint": "1591933097981",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6001382487/containers/31634909/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "tagId": "3",
+                "name": "CurrentLocationButton",
+                "type": "fm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "mergeEventParameters",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "editParamTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "editParamKey",
+                                        "value": "screenName"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "editParamValue",
+                                        "value": "{{screenName}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "editParamKey",
+                                        "value": "Os"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "editParamValue",
+                                        "value": "{{OS Version}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "editParamKey",
+                                        "value": "platform"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "editParamValue",
+                                        "value": "{{Platform}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "action",
+                        "value": "measure"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "location"
+                    }
+                ],
+                "fingerprint": "1591934011920",
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "triggerId": "6",
+                "name": "getCurrentLocation",
+                "type": "ALWAYS",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event Name}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "location"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1591934573116"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "variableId": "4",
+                "name": "screenName",
+                "type": "md",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "allEventParam",
+                        "value": "achievement_id"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "checkEcommerceValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "-"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "suggestedEvent",
+                        "value": "All Events"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "SUGGESTED"
+                    }
+                ],
+                "fingerprint": "1591934112721"
+            },
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "variableId": "5",
+                "name": "location",
+                "type": "md",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0.0,0.0"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventType",
+                        "value": "CUSTOM"
+                    }
+                ],
+                "fingerprint": "1591934226766"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "type": "APP_ID",
+                "name": "App ID"
+            },
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "type": "APP_NAME",
+                "name": "App Name"
+            },
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "type": "APP_VERSION_CODE",
+                "name": "App Version Code"
+            },
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "type": "OS_VERSION",
+                "name": "OS Version"
+            },
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "type": "PLATFORM",
+                "name": "Platform"
+            },
+            {
+                "accountId": "6001382487",
+                "containerId": "31634909",
+                "type": "EVENT_NAME",
+                "name": "Event Name"
+            }
+        ],
+        "fingerprint": "1591934709302",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6001382487/containers/31634909/versions/1?apiLink=version"
+    }
+}

@@ -10,6 +10,8 @@ import UIKit
 import CoreLocation
 import GoogleMaps
 import GooglePlaces
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 struct BTGooglePlace {
     var placeName = ""
@@ -49,6 +51,16 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let button = UIButton(type: .roundedRect)
+        button.frame = CGRect(x: 20, y: 150, width: 50, height: 30)
+        button.backgroundColor = UIColor.red
+        button.setTitle("Crash", for: [])
+        button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
+        view.addSubview(button)
+        self.view.bringSubviewToFront(button)
+        
+        
         let status  = CLLocationManager.authorizationStatus()
         if status == .notDetermined {
             self.locationManager.requestWhenInUseAuthorization()
@@ -57,6 +69,21 @@ class ViewController: UIViewController {
         } else {
             self.locationManager.startUpdatingLocation()
         }
+    }
+    
+    @IBAction func crashButtonTapped(_ sender: AnyObject) {
+        //fatalError()
+        let userInfo = [
+          NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+          NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+          NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Does this page exist?", comment: ""),
+          "ProductID": "123456",
+          "View": self.classForCoder.description()
+        ]
+        let error = NSError.init(domain: NSCocoaErrorDomain,
+                                 code: -1001,
+                                 userInfo: userInfo)
+        Crashlytics.crashlytics().record(error: error)
     }
     
     // MARK: - Private
@@ -220,6 +247,10 @@ extension ViewController: CLLocationManagerDelegate {
 extension ViewController: GMSMapViewDelegate {
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        Analytics.logEvent("location", parameters: [
+            "screenName": self.classForCoder.description(),
+          "platform": "iOS"
+        ])
         
         return true
     }

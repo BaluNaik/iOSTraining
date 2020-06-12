@@ -14,6 +14,9 @@
 		A561066F2489DB42002D8700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A561066D2489DB42002D8700 /* Main.storyboard */; };
 		A56106712489DB43002D8700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56106702489DB43002D8700 /* Assets.xcassets */; };
 		A56106742489DB43002D8700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56106722489DB43002D8700 /* LaunchScreen.storyboard */; };
+		A572BF6324931A3E00FECE1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A572BF6224931A3E00FECE1C /* GoogleService-Info.plist */; };
+		A572BF672493378C00FECE1C /* GTM-PRGJHXD_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = A572BF662493378C00FECE1C /* GTM-PRGJHXD_v1.json */; };
+		A572BF6B24933A7800FECE1C /* getCurrentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A572BF6A24933A7800FECE1C /* getCurrentLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,11 @@
 		A56106702489DB43002D8700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A56106732489DB43002D8700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A56106752489DB43002D8700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A572BF6224931A3E00FECE1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A572BF662493378C00FECE1C /* GTM-PRGJHXD_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "GTM-PRGJHXD_v1.json"; sourceTree = "<group>"; };
+		A572BF6824933A7800FECE1C /* BTGoogleMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BTGoogleMaps-Bridging-Header.h"; sourceTree = "<group>"; };
+		A572BF6924933A7800FECE1C /* getCurrentLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = getCurrentLocation.h; sourceTree = "<group>"; };
+		A572BF6A24933A7800FECE1C /* getCurrentLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = getCurrentLocation.m; sourceTree = "<group>"; };
 		AC6A49CE424CDDEC7E4BF3F8 /* Pods-BTGoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTGoogleMaps.debug.xcconfig"; path = "Target Support Files/Pods-BTGoogleMaps/Pods-BTGoogleMaps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,15 +80,28 @@
 		A56106662489DB42002D8700 /* BTGoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
+				A572BF652493378C00FECE1C /* container */,
 				A56106672489DB42002D8700 /* AppDelegate.swift */,
 				A56106692489DB42002D8700 /* SceneDelegate.swift */,
 				A561066B2489DB42002D8700 /* ViewController.swift */,
+				A572BF6924933A7800FECE1C /* getCurrentLocation.h */,
+				A572BF6A24933A7800FECE1C /* getCurrentLocation.m */,
 				A561066D2489DB42002D8700 /* Main.storyboard */,
 				A56106702489DB43002D8700 /* Assets.xcassets */,
 				A56106722489DB43002D8700 /* LaunchScreen.storyboard */,
 				A56106752489DB43002D8700 /* Info.plist */,
+				A572BF6224931A3E00FECE1C /* GoogleService-Info.plist */,
+				A572BF6824933A7800FECE1C /* BTGoogleMaps-Bridging-Header.h */,
 			);
 			path = BTGoogleMaps;
+			sourceTree = "<group>";
+		};
+		A572BF652493378C00FECE1C /* container */ = {
+			isa = PBXGroup;
+			children = (
+				A572BF662493378C00FECE1C /* GTM-PRGJHXD_v1.json */,
+			);
+			path = container;
 			sourceTree = "<group>";
 		};
 		B0ADCD13B25C76B8A6344853 /* Frameworks */ = {
@@ -103,6 +124,8 @@
 				A56106612489DB42002D8700 /* Frameworks */,
 				A56106622489DB42002D8700 /* Resources */,
 				2798CD84C7ACCE07085024DD /* [CP] Copy Pods Resources */,
+				FA9ABBA742F92007E65B7C98 /* [CP] Embed Pods Frameworks */,
+				A572BF642493203200FECE1C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,6 +148,7 @@
 				TargetAttributes = {
 					A56106632489DB42002D8700 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -151,7 +175,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A572BF672493378C00FECE1C /* GTM-PRGJHXD_v1.json in Resources */,
 				A56106742489DB43002D8700 /* LaunchScreen.storyboard in Resources */,
+				A572BF6324931A3E00FECE1C /* GoogleService-Info.plist in Resources */,
 				A56106712489DB43002D8700 /* Assets.xcassets in Resources */,
 				A561066F2489DB42002D8700 /* Main.storyboard in Resources */,
 			);
@@ -177,6 +203,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BTGoogleMaps/Pods-BTGoogleMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A572BF642493203200FECE1C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		F18C4966821A7B7019E25138 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +243,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA9ABBA742F92007E65B7C98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BTGoogleMaps/Pods-BTGoogleMaps-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BTGoogleMaps/Pods-BTGoogleMaps-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BTGoogleMaps/Pods-BTGoogleMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -209,6 +270,7 @@
 				A561066C2489DB42002D8700 /* ViewController.swift in Sources */,
 				A56106682489DB42002D8700 /* AppDelegate.swift in Sources */,
 				A561066A2489DB42002D8700 /* SceneDelegate.swift in Sources */,
+				A572BF6B24933A7800FECE1C /* getCurrentLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +415,9 @@
 			baseConfigurationReference = AC6A49CE424CDDEC7E4BF3F8 /* Pods-BTGoogleMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 456E6NNKP2;
 				INFOPLIST_FILE = BTGoogleMaps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +426,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BaluTutorial.BTGoogleMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BTGoogleMaps/BTGoogleMaps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,6 +438,7 @@
 			baseConfigurationReference = 3B49563ACC6A83E1C5AF5A96 /* Pods-BTGoogleMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 456E6NNKP2;
 				INFOPLIST_FILE = BTGoogleMaps/Info.plist;
@@ -381,6 +448,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BaluTutorial.BTGoogleMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BTGoogleMaps/BTGoogleMaps-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
