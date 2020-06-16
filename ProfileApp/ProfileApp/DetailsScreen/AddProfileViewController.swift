@@ -180,7 +180,7 @@ class AddProfileViewController: UIViewController {
             let dob = self.dobTextField.text,
             let country = self.countryTextField.text,
             let profileImage = self.profileImageView.image {
-            ProfileDataAPI.saveImageInDocumentDir(image:profileImage , name: name.replacingOccurrences(of: " ", with: ""))
+            _ = ProfileDataAPI.saveImageInDocumentDir(image:profileImage , name: name.replacingOccurrences(of: " ", with: ""))
             let newProfile = Profile(name: name, jobTitle: job, country: country, dob: dob)
             self.delegate?.saveNewprofile(data: newProfile)
             // But the problem is image????

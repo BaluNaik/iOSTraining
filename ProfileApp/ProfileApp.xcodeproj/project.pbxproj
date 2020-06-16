@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A533CAFA24986B3A007AD1ED /* ProfileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533CAF924986B3A007AD1ED /* ProfileTest.swift */; };
+		A533CAFC24986E45007AD1ED /* ProfileDataAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533CAFB24986E45007AD1ED /* ProfileDataAPITest.swift */; };
+		A533CAFE24986E8C007AD1ED /* ProfileAppBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533CAFD24986E8C007AD1ED /* ProfileAppBaseTest.swift */; };
+		A533CAFF24986F0D007AD1ED /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AE7A442457CD7A00C65B97 /* Profile.swift */; };
+		A533CB0024986F57007AD1ED /* ProfileDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AE7A472457CE3200C65B97 /* ProfileDataAPI.swift */; };
 		A58CA86024592AB700CF7B26 /* AddProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CA85F24592AB700CF7B26 /* AddProfileViewController.swift */; };
 		A58CA86224592AD900CF7B26 /* ProfileShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CA86124592AD900CF7B26 /* ProfileShowViewController.swift */; };
 		A5A43D182459166400B3A2D5 /* ProfileDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A43D172459166400B3A2D5 /* ProfileDetailsScreen.swift */; };
@@ -21,7 +26,22 @@
 		A5AE7A4B2457D11D00C65B97 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AE7A4A2457D11D00C65B97 /* ProfileTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A533CAF4249869D2007AD1ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5AE7A242457CB8400C65B97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5AE7A2B2457CB8400C65B97;
+			remoteInfo = ProfileApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A533CAEF249869D2007AD1ED /* ProfileAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfileAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A533CAF3249869D2007AD1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A533CAF924986B3A007AD1ED /* ProfileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTest.swift; sourceTree = "<group>"; };
+		A533CAFB24986E45007AD1ED /* ProfileDataAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataAPITest.swift; sourceTree = "<group>"; };
+		A533CAFD24986E8C007AD1ED /* ProfileAppBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAppBaseTest.swift; sourceTree = "<group>"; };
 		A58CA85F24592AB700CF7B26 /* AddProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileViewController.swift; sourceTree = "<group>"; };
 		A58CA86124592AD900CF7B26 /* ProfileShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShowViewController.swift; sourceTree = "<group>"; };
 		A5A43D172459166400B3A2D5 /* ProfileDetailsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailsScreen.swift; sourceTree = "<group>"; };
@@ -39,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A533CAEC249869D2007AD1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5AE7A292457CB8400C65B97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,6 +76,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A533CAF0249869D2007AD1ED /* ProfileAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A533CAF3249869D2007AD1ED /* Info.plist */,
+				A533CAFD24986E8C007AD1ED /* ProfileAppBaseTest.swift */,
+				A533CAF924986B3A007AD1ED /* ProfileTest.swift */,
+				A533CAFB24986E45007AD1ED /* ProfileDataAPITest.swift */,
+			);
+			path = ProfileAppTests;
+			sourceTree = "<group>";
+		};
 		A5A43D152459164500B3A2D5 /* ListScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				A5AE7A2E2457CB8400C65B97 /* ProfileApp */,
+				A533CAF0249869D2007AD1ED /* ProfileAppTests */,
 				A5AE7A2D2457CB8400C65B97 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A5AE7A2C2457CB8400C65B97 /* ProfileApp.app */,
+				A533CAEF249869D2007AD1ED /* ProfileAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +168,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A533CAEE249869D2007AD1ED /* ProfileAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A533CAF8249869D2007AD1ED /* Build configuration list for PBXNativeTarget "ProfileAppTests" */;
+			buildPhases = (
+				A533CAEB249869D2007AD1ED /* Sources */,
+				A533CAEC249869D2007AD1ED /* Frameworks */,
+				A533CAED249869D2007AD1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A533CAF5249869D2007AD1ED /* PBXTargetDependency */,
+			);
+			name = ProfileAppTests;
+			productName = ProfileAppTests;
+			productReference = A533CAEF249869D2007AD1ED /* ProfileAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A5AE7A2B2457CB8400C65B97 /* ProfileApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5AE7A402457CB8500C65B97 /* Build configuration list for PBXNativeTarget "ProfileApp" */;
@@ -155,6 +213,11 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = BaluTutorial;
 				TargetAttributes = {
+					A533CAEE249869D2007AD1ED = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+						TestTargetID = A5AE7A2B2457CB8400C65B97;
+					};
 					A5AE7A2B2457CB8400C65B97 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -174,11 +237,19 @@
 			projectRoot = "";
 			targets = (
 				A5AE7A2B2457CB8400C65B97 /* ProfileApp */,
+				A533CAEE249869D2007AD1ED /* ProfileAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A533CAED249869D2007AD1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5AE7A2A2457CB8400C65B97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +263,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A533CAEB249869D2007AD1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A533CB0024986F57007AD1ED /* ProfileDataAPI.swift in Sources */,
+				A533CAFC24986E45007AD1ED /* ProfileDataAPITest.swift in Sources */,
+				A533CAFF24986F0D007AD1ED /* Profile.swift in Sources */,
+				A533CAFE24986E8C007AD1ED /* ProfileAppBaseTest.swift in Sources */,
+				A533CAFA24986B3A007AD1ED /* ProfileTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5AE7A282457CB8400C65B97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +292,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A533CAF5249869D2007AD1ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5AE7A2B2457CB8400C65B97 /* ProfileApp */;
+			targetProxy = A533CAF4249869D2007AD1ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A5AE7A352457CB8400C65B97 /* Main.storyboard */ = {
@@ -230,6 +321,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A533CAF6249869D2007AD1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 456E6NNKP2;
+				INFOPLIST_FILE = ProfileAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaluTutorial.ProfileAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfileApp.app/ProfileApp";
+			};
+			name = Debug;
+		};
+		A533CAF7249869D2007AD1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 456E6NNKP2;
+				INFOPLIST_FILE = ProfileAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaluTutorial.ProfileAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProfileApp.app/ProfileApp";
+			};
+			name = Release;
+		};
 		A5AE7A3E2457CB8500C65B97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -385,6 +519,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A533CAF8249869D2007AD1ED /* Build configuration list for PBXNativeTarget "ProfileAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A533CAF6249869D2007AD1ED /* Debug */,
+				A533CAF7249869D2007AD1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5AE7A272457CB8400C65B97 /* Build configuration list for PBXProject "ProfileApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
