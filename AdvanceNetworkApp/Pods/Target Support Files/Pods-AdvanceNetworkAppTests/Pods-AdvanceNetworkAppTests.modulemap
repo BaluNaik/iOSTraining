@@ -1,0 +1,6 @@
+framework module Pods_AdvanceNetworkAppTests {
+  umbrella header "Pods-AdvanceNetworkAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

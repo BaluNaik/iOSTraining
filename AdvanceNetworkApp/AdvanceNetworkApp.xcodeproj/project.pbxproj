@@ -18,6 +18,7 @@
 		A50A3A34246E4A05008D04F1 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50A3A33246E4A05008D04F1 /* Breed.swift */; };
 		A50A3A36246E4C5C008D04F1 /* HomeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50A3A35246E4C5C008D04F1 /* HomeDataProvider.swift */; };
 		A50A3A38246E515C008D04F1 /* HomeDataProviderProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50A3A37246E515C008D04F1 /* HomeDataProviderProtocal.swift */; };
+		A533CB0824987612007AD1ED /* AdvanceNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533CB0724987612007AD1ED /* AdvanceNetworkAppTests.swift */; };
 		A560ADC02474D46200B05DA2 /* FavouritesDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560ADBF2474D46200B05DA2 /* FavouritesDataProvider.swift */; };
 		A560ADC22474D47600B05DA2 /* FavouritesDataProviderProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560ADC12474D47600B05DA2 /* FavouritesDataProviderProtocal.swift */; };
 		A560ADC52474D4AF00B05DA2 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560ADC42474D4AF00B05DA2 /* Favourites.swift */; };
@@ -31,11 +32,24 @@
 		A5A3DC332472271800A5BEF0 /* LoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3DC322472271800A5BEF0 /* LoaderTableViewCell.swift */; };
 		A5FCCE5724776BC200DCBC01 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FCCE5624776BC200DCBC01 /* UploadViewController.swift */; };
 		E393791F54E40BA696BF101C /* Pods_AdvanceNetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D76C14CC466021C292998EE /* Pods_AdvanceNetworkApp.framework */; };
+		FC8BA43C6902845E231E907F /* Pods_AdvanceNetworkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1725C85FFBA60A41B88445 /* Pods_AdvanceNetworkAppTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A533CB0A24987612007AD1ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A50A3A07246E3240008D04F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50A3A0E246E3240008D04F1;
+			remoteInfo = AdvanceNetworkApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		078CAA2AE9FCDB051C014DF8 /* Pods-AdvanceNetworkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvanceNetworkApp.debug.xcconfig"; path = "Target Support Files/Pods-AdvanceNetworkApp/Pods-AdvanceNetworkApp.debug.xcconfig"; sourceTree = "<group>"; };
+		368F1AB648D2B05DE415AEB1 /* Pods-AdvanceNetworkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvanceNetworkAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AdvanceNetworkAppTests/Pods-AdvanceNetworkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D76C14CC466021C292998EE /* Pods_AdvanceNetworkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvanceNetworkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54EF47B3E361E6D2FFE0AFEA /* Pods-AdvanceNetworkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvanceNetworkAppTests.release.xcconfig"; path = "Target Support Files/Pods-AdvanceNetworkAppTests/Pods-AdvanceNetworkAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7916C5110E76AF4ED7919F86 /* Pods-AdvanceNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvanceNetworkApp.release.xcconfig"; path = "Target Support Files/Pods-AdvanceNetworkApp/Pods-AdvanceNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 		A50A3A0F246E3240008D04F1 /* AdvanceNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvanceNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50A3A12246E3240008D04F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +65,9 @@
 		A50A3A33246E4A05008D04F1 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		A50A3A35246E4C5C008D04F1 /* HomeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataProvider.swift; sourceTree = "<group>"; };
 		A50A3A37246E515C008D04F1 /* HomeDataProviderProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataProviderProtocal.swift; sourceTree = "<group>"; };
+		A533CB0524987612007AD1ED /* AdvanceNetworkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvanceNetworkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A533CB0724987612007AD1ED /* AdvanceNetworkAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceNetworkAppTests.swift; sourceTree = "<group>"; };
+		A533CB0924987612007AD1ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A560ADBF2474D46200B05DA2 /* FavouritesDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDataProvider.swift; sourceTree = "<group>"; };
 		A560ADC12474D47600B05DA2 /* FavouritesDataProviderProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDataProviderProtocal.swift; sourceTree = "<group>"; };
 		A560ADC42474D4AF00B05DA2 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
@@ -62,6 +79,7 @@
 		A58755B324738323009D8D4B /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		A5A3DC322472271800A5BEF0 /* LoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTableViewCell.swift; sourceTree = "<group>"; };
 		A5FCCE5624776BC200DCBC01 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		FD1725C85FFBA60A41B88445 /* Pods_AdvanceNetworkAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvanceNetworkAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A533CB0224987612007AD1ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8BA43C6902845E231E907F /* Pods_AdvanceNetworkAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				4D76C14CC466021C292998EE /* Pods_AdvanceNetworkApp.framework */,
+				FD1725C85FFBA60A41B88445 /* Pods_AdvanceNetworkAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				A50A3A11246E3240008D04F1 /* AdvanceNetworkApp */,
+				A533CB0624987612007AD1ED /* AdvanceNetworkAppTests */,
 				A50A3A10246E3240008D04F1 /* Products */,
 				F0634902386D65141DA5DFC3 /* Pods */,
 				5AF134FEB6925C713444C353 /* Frameworks */,
@@ -98,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A50A3A0F246E3240008D04F1 /* AdvanceNetworkApp.app */,
+				A533CB0524987612007AD1ED /* AdvanceNetworkAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +193,15 @@
 				A50A3A37246E515C008D04F1 /* HomeDataProviderProtocal.swift */,
 			);
 			path = ModelDataProvider;
+			sourceTree = "<group>";
+		};
+		A533CB0624987612007AD1ED /* AdvanceNetworkAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A533CB0724987612007AD1ED /* AdvanceNetworkAppTests.swift */,
+				A533CB0924987612007AD1ED /* Info.plist */,
+			);
+			path = AdvanceNetworkAppTests;
 			sourceTree = "<group>";
 		};
 		A560ADBD2474D42D00B05DA2 /* Favourits */ = {
@@ -266,6 +304,8 @@
 			children = (
 				078CAA2AE9FCDB051C014DF8 /* Pods-AdvanceNetworkApp.debug.xcconfig */,
 				7916C5110E76AF4ED7919F86 /* Pods-AdvanceNetworkApp.release.xcconfig */,
+				368F1AB648D2B05DE415AEB1 /* Pods-AdvanceNetworkAppTests.debug.xcconfig */,
+				54EF47B3E361E6D2FFE0AFEA /* Pods-AdvanceNetworkAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -292,6 +332,26 @@
 			productReference = A50A3A0F246E3240008D04F1 /* AdvanceNetworkApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A533CB0424987612007AD1ED /* AdvanceNetworkAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A533CB0E24987612007AD1ED /* Build configuration list for PBXNativeTarget "AdvanceNetworkAppTests" */;
+			buildPhases = (
+				B45EB0A2D382D16511208F4C /* [CP] Check Pods Manifest.lock */,
+				A533CB0124987612007AD1ED /* Sources */,
+				A533CB0224987612007AD1ED /* Frameworks */,
+				A533CB0324987612007AD1ED /* Resources */,
+				DEF347298EDC043B36186A42 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A533CB0B24987612007AD1ED /* PBXTargetDependency */,
+			);
+			name = AdvanceNetworkAppTests;
+			productName = AdvanceNetworkAppTests;
+			productReference = A533CB0524987612007AD1ED /* AdvanceNetworkAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -304,6 +364,10 @@
 				TargetAttributes = {
 					A50A3A0E246E3240008D04F1 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					A533CB0424987612007AD1ED = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = A50A3A0E246E3240008D04F1;
 					};
 				};
 			};
@@ -321,6 +385,7 @@
 			projectRoot = "";
 			targets = (
 				A50A3A0E246E3240008D04F1 /* AdvanceNetworkApp */,
+				A533CB0424987612007AD1ED /* AdvanceNetworkAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,6 +398,13 @@
 				A50A3A21246E3241008D04F1 /* LaunchScreen.storyboard in Resources */,
 				A50A3A1E246E3241008D04F1 /* Assets.xcassets in Resources */,
 				A50A3A1C246E3240008D04F1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A533CB0324987612007AD1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +431,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B45EB0A2D382D16511208F4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdvanceNetworkAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF347298EDC043B36186A42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdvanceNetworkAppTests/Pods-AdvanceNetworkAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdvanceNetworkAppTests/Pods-AdvanceNetworkAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdvanceNetworkAppTests/Pods-AdvanceNetworkAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6E041B3C0BA7697C55E26F0 /* [CP] Embed Pods Frameworks */ = {
@@ -408,7 +519,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A533CB0124987612007AD1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A533CB0824987612007AD1ED /* AdvanceNetworkAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A533CB0B24987612007AD1ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50A3A0E246E3240008D04F1 /* AdvanceNetworkApp */;
+			targetProxy = A533CB0A24987612007AD1ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A50A3A1A246E3240008D04F1 /* Main.storyboard */ = {
@@ -480,7 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -534,7 +661,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -584,6 +711,48 @@
 			};
 			name = Release;
 		};
+		A533CB0C24987612007AD1ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368F1AB648D2B05DE415AEB1 /* Pods-AdvanceNetworkAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 456E6NNKP2;
+				INFOPLIST_FILE = AdvanceNetworkAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaluTutorial.AdvanceNetworkAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdvanceNetworkApp.app/AdvanceNetworkApp";
+			};
+			name = Debug;
+		};
+		A533CB0D24987612007AD1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54EF47B3E361E6D2FFE0AFEA /* Pods-AdvanceNetworkAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 456E6NNKP2;
+				INFOPLIST_FILE = AdvanceNetworkAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaluTutorial.AdvanceNetworkAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdvanceNetworkApp.app/AdvanceNetworkApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -601,6 +770,15 @@
 			buildConfigurations = (
 				A50A3A26246E3241008D04F1 /* Debug */,
 				A50A3A27246E3241008D04F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A533CB0E24987612007AD1ED /* Build configuration list for PBXNativeTarget "AdvanceNetworkAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A533CB0C24987612007AD1ED /* Debug */,
+				A533CB0D24987612007AD1ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

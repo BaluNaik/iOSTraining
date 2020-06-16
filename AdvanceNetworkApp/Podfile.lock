@@ -1,22 +1,30 @@
 PODS:
   - IHProgressHUD (0.1.4)
+  - Nimble (8.0.7)
+  - Quick (2.2.0)
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
 
 DEPENDENCIES:
   - IHProgressHUD
+  - Nimble
+  - Quick
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
     - IHProgressHUD
+    - Nimble
+    - Quick
     - SDWebImage
 
 SPEC CHECKSUMS:
   IHProgressHUD: a01846bfbb581c761c79747c67b08387c3bdfae3
+  Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
 
-PODFILE CHECKSUM: 4e78615907c48e8d290892b5bc0941c9119e832f
+PODFILE CHECKSUM: 57952bc548c57a0335b81dc8afb2c278d052879f
 
 COCOAPODS: 1.8.4
