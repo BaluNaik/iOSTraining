@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  ProfileApp
+//  PushNotification
 //
-//  Created by Balu Naik on 4/28/20.
+//  Created by Balu Naik on 6/22/20.
 //  Copyright © 2020 BaluTutorial. All rights reserved.
 //
 
@@ -14,13 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-//        window?.rootViewController = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
-//        window?.makeKeyAndVisible()
-
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-            self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-        }
-
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
